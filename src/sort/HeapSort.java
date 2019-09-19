@@ -10,7 +10,7 @@ public class HeapSort {
         System.out.println(Arrays.toString(arr));
     }
 
-    private static void sort(int[] arr) {
+    public static void sort(int[] arr) {
         int len = arr.length;
         for (int i = 1; i <= len; i++) {
             heaping(arr, 0, len - i);
