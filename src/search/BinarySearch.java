@@ -8,7 +8,7 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] arr = {57, 40, 38, 11, 13, 34, 48, 75, 6, 19, 9, 7};
         HeapSort.sort(arr);
-        int dist = 119;
+        int dist = 11;
         int result = search(arr, dist, 0, arr.length);
         System.out.println(Arrays.toString(arr));
         System.out.println(result);
@@ -24,12 +24,12 @@ public class BinarySearch {
             if (len == 0) {
                 return -1;
             }
-            return search(arr, dist, l, len);
+            return search(arr, dist, l, len - 1);
         } else {
             if (len == arr.length - 1) {
                 return -1;
             }
-            return search(arr, dist, len, r);
+            return search(arr, dist, len + 1, r);
         }
     }
 }
